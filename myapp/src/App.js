@@ -1,12 +1,41 @@
 import React from 'react';
-import HelloWorld from './HelloWorld';
+// import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './App.css';
+
+import Home from './Components/Home';
+import About from './Components/About';
+import Contact from './Components/Contact';
+import Cv from './Components/cv';
+import Portfolio from './Components/Portfolio';
+import Footer from './Components/Footer';
+import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
+
   return (
-    <div>
-      <HelloWorld/>
-    </div>
+      <BrowserRouter>
+            <ScrollToTop /> 
+            <div className="grain-overlay"></div>
+
+            {/* Routing */}
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+                <Route exact path="/home" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/cv" element={<Cv />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                {/* Add more routes as needed */}
+            </Routes>
+
+            
+            {/* Include the Footer component */}
+            <Footer />
+            
+      </BrowserRouter>
   );
 }
+
 
 export default App;
