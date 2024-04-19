@@ -16,7 +16,7 @@ function HeaderHome() {
                 <nav>
                     <Link to="/about" style={{ color: 'black', position: 'right', marginRight: '10px'}}>about</Link>
                     <Link to="/portfolio" style={{ color: 'black', position: 'right', marginRight: '10px' }}>portfolio</Link>
-                    <Link to="/cv" style={{ color: 'black', position: 'right', marginRight: '10px' }}>cv</Link>
+                    <Link to="https://drive.google.com/file/d/1xQjBmGY8R84_w-audeARdjOIfOKaq9H1/view?usp=sharing" style={{ color: 'black', position: 'right', marginRight: '10px' }}>cv</Link>
                 </nav>
             </div>
         </div>

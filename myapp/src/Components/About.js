@@ -1,10 +1,16 @@
 import React from 'react';
 import headshot from '../Images/headshot_1.png';
 import Header from './Header';
+import {Helmet} from "react-helmet";
  
 function About() {
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>about</title>
+                <link rel="canonical" href="http://example.com/example" />
+            </Helmet>
             <Header />
         <div style={{ padding: '5px' }}>
             <h2>about me</h2>

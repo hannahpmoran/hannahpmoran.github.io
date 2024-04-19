@@ -1,12 +1,18 @@
 import React from 'react';
 import Header from './Header';
+import {Helmet} from "react-helmet";
  
 function Portfolio() {
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>portfolio</title>
+                <link rel="canonical" href="http://example.com/example" />
+            </Helmet>
             <Header />
 
-            <div style={{ padding: '5px' }}>
+            <div style={{ padding: '5px' }} >
                 <h2>portfolio</h2>
             </div>
 

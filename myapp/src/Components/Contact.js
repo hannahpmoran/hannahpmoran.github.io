@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Helmet} from "react-helmet";
 
 function Contact() {
     // Define state variables for the form fields
@@ -25,6 +26,12 @@ function Contact() {
     };
 
     return (
+        <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>contact</title>
+                <link rel="canonical" href="http://example.com/example" />
+            </Helmet>
         <div style={{ padding: '20px' }}>
             <h2>Contact Me</h2>
             <form onSubmit={handleSubmit}>
@@ -69,6 +76,7 @@ function Contact() {
             </form>
 
             
+        </div>
         </div>
     );
 }

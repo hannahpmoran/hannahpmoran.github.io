@@ -8,7 +8,6 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Cv from './Components/cv';
 import Portfolio from './Components/Portfolio';
-import Footer from './Components/Footer';
 import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
@@ -28,10 +27,6 @@ function App() {
                 <Route path="/portfolio" element={<Portfolio />} />
                 {/* Add more routes as needed */}
             </Routes>
-
-            
-            {/* Include the Footer component */}
-            <Footer />
             
       </BrowserRouter>
   );

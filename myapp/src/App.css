@@ -19,13 +19,13 @@ header {
 
 /* Unvisited links */
 a {
-    color: #F7F4EF; /* Set the desired link color */
+    color: black; /* Set the desired link color */
     text-decoration: none; /* Optional: Remove underline */
 }
 
 /* Visited links */
 a:visited {
-    color: #F7F4EF; /* Set the desired visited link color */
+    color: black; /* Set the desired visited link color */
 }
 
 /* Hover effect for links */
@@ -58,4 +58,23 @@ a:hover {
 /* Opacity of text when visible (fully opaque) */
 .fade-text.visible {
     opacity: 1;
+}
+
+.icon-nav-1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+  
+.icon {
+    width: 100%; /* Set the fixed width */
+    height: 400px; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image doesn't exceed its parent's width */
+}
+
+.hover-element:hover {
+    filter: blur(5px); /* Adjust the blur amount as needed */
+}
+
+.hover-element:hover + .hover-text {
+    opacity: 1; /* Show the text when the element is hovered over */
 }
