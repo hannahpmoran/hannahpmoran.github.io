@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './Header';
 import {Helmet} from "react-helmet";
  
 function Portfolio() {
@@ -10,7 +9,6 @@ function Portfolio() {
                 <title>portfolio</title>
                 <link rel="canonical" href="http://example.com/example" />
             </Helmet>
-            <Header />
 
             <div style={{ padding: '5px' }} >
                 <h2>portfolio</h2>

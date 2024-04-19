@@ -1,7 +1,12 @@
 import React from 'react';
-import headshot from '../Images/headshot_1.png';
-import Header from './Header';
 import {Helmet} from "react-helmet";
+
+// import components
+import Footer from './Footer';
+
+// import images
+import headshot from '../Images/headshot_1.png';
+
  
 function About() {
     return (
@@ -11,13 +16,13 @@ function About() {
                 <title>about</title>
                 <link rel="canonical" href="http://example.com/example" />
             </Helmet>
-            <Header />
-        <div style={{ padding: '5px' }}>
-            <h2>about me</h2>
+
+        <div style={{ textAlign: 'center' }}>
+            <h1>about me</h1>
         </div>
             
 
-            <div style={{ padding: '5px', display: 'flex', gap: '20px' }}>
+            <div style={{ padding: '5px', display: 'flex', gap: '20px', justifyContent: 'space-evenly', }}>
 
                 {/* Text */}
                 <div>
@@ -34,6 +39,8 @@ function About() {
             {/* <div style={{ padding: '5px', height: '1500px' }}>
                 <p>Keep scrolling...</p>
             </div> */}
+
+        <Footer/>
 
         </div>
     );

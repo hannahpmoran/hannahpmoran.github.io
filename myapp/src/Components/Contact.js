@@ -32,8 +32,17 @@ function Contact() {
                 <title>contact</title>
                 <link rel="canonical" href="http://example.com/example" />
             </Helmet>
+
         <div style={{ padding: '20px' }}>
-            <h2>Contact Me</h2>
+            <h1><i>don't</i> be a stranger,</h1>
+            <h3>you can find me at:</h3>
+
+            <p>email: <b>hannah.p.moran@gmail.com</b> </p>
+            <p>phone: <b>(763) XXX XXXX</b> </p>
+            <p>based in: <b>Northfield, MN</b></p>
+
+
+        <h3>or, send me a message:</h3>
             <form onSubmit={handleSubmit}>
                 <div style={{ marginBottom: '10px' }}>
                     <label htmlFor="name">Name:</label>

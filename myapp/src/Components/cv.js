@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './Header';
 import {Helmet} from "react-helmet";
 
  
@@ -11,8 +10,6 @@ const Cv = () => {
                 <title>cv</title>
                 <link rel="canonical" href="http://example.com/example" />
             </Helmet>
-
-            <Header />
 
         <div style={{ padding: '5px' }}>
             <h2>cv</h2>

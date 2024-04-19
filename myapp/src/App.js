@@ -9,6 +9,7 @@ import Contact from './Components/Contact';
 import Cv from './Components/cv';
 import Portfolio from './Components/Portfolio';
 import ScrollToTop from './Components/ScrollToTop';
+import Header from './Components/Header';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <BrowserRouter>
             <ScrollToTop /> 
             <div className="grain-overlay"></div>
+            <Header />
 
             {/* Routing */}
             <Routes>

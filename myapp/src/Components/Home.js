@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import {Helmet} from "react-helmet";
 
-
-import coverPhoto from '../Images/film_photo_3.png';
-import designImg from '../Images/map_1.png';
-import photographyImg from '../Images/proj_pic_1.png';
-import hciImg from '../Images/not_my_code_1.png';
-
-
-import '../App.css';
-
-import HeaderHome from './HeaderHome';
+// import components
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
+import HoverIcon from './HoverIcon';
+import IDCard from './IDCard';
+
+// import style
+import '../App.css';
+
+// import images
+import coverPhoto from '../Images/film_photo_3.png';
+import headshot from '../Images/headshot_1.png';
+import designImg from '../Images/proj_pic_1.png';
+import photographyImg from '../Images/photography.png';
+import hciImg from '../Images/ivy.jpg';
 
 function Home() {
 
@@ -37,6 +40,19 @@ function Home() {
         };
     }, []);
 
+        // State variable to track hover state
+    // const [isHovered, setIsHovered] = useState(false);
+
+    // Event handler for when the mouse enters the element
+    // const handleMouseEnter = () => {
+    //     setIsHovered(true);
+    // };
+
+    // Event handler for when the mouse leaves the element
+    // const handleMouseLeave = () => {
+    //     setIsHovered(false);
+    // };
+
     return (
         <div >
 
@@ -48,152 +64,133 @@ function Home() {
                 <link rel="canonical" href="http://example.com/example" />
             </Helmet>
 
-
-            {/* {hasScrolledTargetDistance && <Header />} */}
-
             {/* Main content */}
             <main>
 
-            {/* Header */}
-            {!showCover && <HeaderHome/>}
-
-            {/* Background */}
-            <img src={coverPhoto} alt="black and white film" style={{ width: '100%', opacity: '1'}}/>  
+            {/* Image with conditional blur effect */}
+            <img
+                src={coverPhoto}
+                alt="black and white film"
+                style={{
+                    width: '100%', // Make the image fill the container
+                    height: 'auto', // Maintain aspect ratio
+                    filter: !showCover ? 'blur(3px)' : 'none', // Apply blur effect based on scroll position
+                    transition: 'filter 0.3s ease', // Smooth transition for blur effect
+                }}
+            />
 
 
             {/* Overlayed Text Header*/}
-            {showCover && <div> 
+            {<div> 
 
                 <div style={{
-                    position: 'fixed', // Absolute positioning within the container
-                    top: '20%', // Position the text vertically at the middle
+                    position: 'absolute', // Absolute positioning within the container
+                    top: '25%', // Position the text vertically at the middle
                     left: '50%', // Position the text horizontally at the middle
                     transform: 'translate(-50%, -50%)', // Center the text
                     color: 'black', // Set text color
                     fontSize: '2rem', // Adjust font size as needed
                     fontWeight: 'bold', // Adjust font weight as needed
                     textAlign: 'center', // Center-align the text
-                    lineHeight: '0em'
+                    lineHeight: '0em',
+                    filter: !showCover ? 'blur(3px)' : 'none', // Apply blur effect based on scroll position
+                    transition: 'filter 0.3s ease' // Smooth transition for blur effect
                 }}>
                     <p>the <i>digital </i></p>
                     <p>portfolio</p>
                 </div>
 
                 {/* Overlayed Text Footer*/}
-                <div style={{
-                    position: 'fixed', // Absolute positioning within the container
-                    top: '90%', // Position the text vertically at the middle
-                    left: '50%', // Position the text horizontally at the middle
+                <div className="bounce-text" style={{
+                    position: 'absolute', // Absolute positioning within the container
+                    top: '80%',  // Position the text horizontally at the middle
+                    right: '50%',
                     transform: 'translate(-50%, -50%)', // Center the text
                     color: '#f4f4f4', // Set text color
                     fontSize: '1rem', // Adjust font size as needed
                     fontWeight: 'bold', // Adjust font weight as needed
                     textAlign: 'center', // Center-align the text
-                    opacity: '0.7'
+                    lineHeight: '0em',
+                    opacity: '0.7',
+                    filter: !showCover ? 'blur(3px)' : 'none', // Apply blur effect based on scroll position
+                    transition: 'filter 0.3s ease' 
                 }}>
-                    <i>explore</i>
+                    <p><i>explore</i></p>
                 </div>
-                {/* <img src={scrollMoreArrow} alt = ''></img> */}
+
             </div> }
 
             
             {/*Divider Line*/}
-            <div style={{ padding: '5px', height: '50px' }}></div>
+            <div style={{ padding: '5px', height: '20px' }}></div>
             <div style={{ padding: '5px', borderTop: '2px solid black', width: '100%' }}></div>
-            <div style={{ padding: '5px', height: '50px' }}></div>
+            <div style={{ padding: '5px', height: '20px' }}></div>
 
 
             {/*Icons*/}
             <h2 style = {{
                 textAlign: 'center',
-                color: 'black',
-            }}>view my <b>work</b>
+                color: 'black', 
+                fontSize: '3rem',
+                lineHeight: '0em'}}>
+            <i>my work</i>
             </h2>
 
-            <div className="icon-nav-1" style={{
-                position: 'relative', // Enable absolute positioning within the container
-                width: '100%', // Adjust the width as needed
-                height: 'auto', // Adjust the height as needed
-                overflow: 'hidden', // Ensure the content does not overflow
-                justifyContent: 'space-evenly',
-                buffer: '5px'
-            }}>
-                
-                <div>
 
-                    {/*Design*/}
-                    <div style={{
-                        width: '100%', // The element should fill the container
-                        height: '100%',  // Set a background color for demonstration
-                        transition: 'filter 0.3s ease', // Transition for blur effect
-                    }} className="hover-element">
-                        <a href="/design">
-                            <img src={designImg} alt="Page 1" className="icon" />
-                            
-                        </a>
-                    </div>
-
-                    {/* Text */}
-                    {/* <div style={{
-                        position: 'absolute', // Absolute positioning to overlay the text
-                        top: 0, // Align to the top
-                        left: 0, // Align to the left
-                        width: '100%', // Match the width of the container
-                        height: '100%', // Match the height of the container
-                        display: 'flex', // Use flexbox layout for centering
-                        justifyContent: 'center', // Center the text horizontally
-                        alignItems: 'center', // Center the text vertically
-                        color: 'white', // Set the text color
-                        fontSize: '1.5rem', // Adjust the font size as needed
-                        opacity: 1, // Initially hide the text
-                        transition: 'opacity 0.3s ease', // Transition for text opacity
-                    }} className="hover-text" >
-                    Hovered Text
-                    </div> */}
-                    
-                </div>
-
-                {/*Photography*/}
-                <div>
-                <div style={{
-                    width: '100%', // The element should fill the container
-                    height: '100%', // Set a background color for demonstration
-                    transition: 'filter 0.3s ease', // Transition for blur effect
-                }} className="hover-element">
-                    <a href="/photography">
-                        <img src={photographyImg} alt="Page 2" className="icon" />
-                    </a>
-                </div>
-
-                </div>
-                
-                {/*UI/UX*/}
-                <div>
-                <div style={{
-                    width: '100%', // The element should fill the container
-                    height: '100%', // Set a background color for demonstration
-                    transition: 'filter 0.3s ease', // Transition for blur effect
-                }} className="hover-element">
-                    <a href="/uiux">
-                        <img src={hciImg} alt="Page 3" className="icon" />
-                    </a>
-                </div>
-
-                </div>
-                
-
+            {/*ICON NAV BAR DIV*/} 
+            <div className='icon-nav-1 '>
+            <HoverIcon
+                iconContent={ <a href="/photography"><img src={photographyImg} alt="photography" className="icon" /></a>}
+                hoverText={"PHOTOGRAPHY"}
+                style = {{}}
+                />
+            <HoverIcon
+                iconContent={ <a href="/design"><img src={designImg} alt="design" className="icon" /></a>}
+                hoverText={"DESIGN"}
+                style = {{}}
+                />
+            <HoverIcon
+                iconContent={ <a href="/code"><img src={hciImg} alt="code" className="icon" /></a>}
+                hoverText={"HCI"}
+                style = {{}}
+                />
             </div>
 
-            <div style={{ padding: '5px', height: '1500px' }}>
-                <p>Keep scrolling...</p>
-            </div>
+            
+            
 
+            {/*Divider Line*/}
+            <div style={{ padding: '5px', height: '50px' }}></div>
+            <div style={{ padding: '5px', borderTop: '2px solid black', width: '100%' , alignItems: 'center'}}></div>
+            <div style={{ padding: '5px', height: '20px' }}></div>
+               
+            {/*Quick About*/}
+            <h2 style = {{
+                textAlign: 'center',
+                color: 'black', 
+                fontSize: '3rem',
+                lineHeight: '0em'}}>
+            <i>who i am</i>
+            </h2>
 
+            <IDCard 
+                profilePicture={headshot}
+                name="Hannah P Moran"
+                bio="A Computer Science Major, Digital Arts and Humanities Minor at Carleton College.
+                A Computer Science Major, Digital Arts and Humanities Minor at Carleton College.
+                A Computer Science Major, Digital Arts and Humanities Minor at Carleton College.
+                A Computer Science Major, Digital Arts and Humanities Minor at Carleton College.
+                A Computer Science Major, Digital Arts and Humanities Minor at Carleton College.
+                A Computer Science Major, Digital Arts and Humanities Minor at Carleton College.
+                A Computer Science Major, Digital Arts and Humanities Minor at Carleton College."
+                style = {{alignItems: 'center', justifyContent: 'center', margin: 'auto'}}
+            />
+
+            <div style={{ padding: '5px', height: '50px' }}></div>
 
             {/* Include the Footer component */}
             {!showCover && <Footer/>}
-            
-
+        
             </main>
 
         </div>
