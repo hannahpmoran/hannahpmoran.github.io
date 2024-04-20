@@ -135,3 +135,11 @@ a:hover {
     margin: 5px 0; /* Add vertical spacing */
     font-size: 1rem; /* Adjust font size as needed */
 }
+
+@font-face {
+    font-family: 'Butler-Barcelona'; /* Custom font name */
+    src: url('./Fonts/Butler-Free-Blk.otf') format('otf'); /* Path to woff file */
+    font-weight: normal; /* Font weight */
+    font-style: normal; /* Font style */
+}
+

@@ -89,21 +89,21 @@ function Home() {
                     left: '50%', // Position the text horizontally at the middle
                     transform: 'translate(-50%, -50%)', // Center the text
                     color: 'black', // Set text color
-                    fontSize: '2rem', // Adjust font size as needed
+                    fontSize: '3rem', // Adjust font size as needed
                     fontWeight: 'bold', // Adjust font weight as needed
                     textAlign: 'center', // Center-align the text
                     lineHeight: '0em',
                     filter: !showCover ? 'blur(3px)' : 'none', // Apply blur effect based on scroll position
                     transition: 'filter 0.3s ease' // Smooth transition for blur effect
                 }}>
-                    <p>the <i>digital </i></p>
+                    <p className='Butler-Barcelona'>the <i>digital </i></p>
                     <p>portfolio</p>
                 </div>
 
                 {/* Overlayed Text Footer*/}
                 <div className="bounce-text" style={{
                     position: 'absolute', // Absolute positioning within the container
-                    top: '80%',  // Position the text horizontally at the middle
+                    top: '85%',  // Position the text horizontally at the middle
                     right: '50%',
                     transform: 'translate(-50%, -50%)', // Center the text
                     color: '#f4f4f4', // Set text color
@@ -120,11 +120,7 @@ function Home() {
 
             </div> }
 
-            
-            {/*Divider Line*/}
-            <div style={{ padding: '5px', height: '20px' }}></div>
-            <div style={{ padding: '5px', borderTop: '2px solid black', width: '100%' }}></div>
-            <div style={{ padding: '5px', height: '20px' }}></div>
+            <div style={{ padding: '5px', height: '50px' }}></div>
 
 
             {/*Icons*/}
@@ -136,6 +132,10 @@ function Home() {
             <i>my work</i>
             </h2>
 
+            {/*Divider Line*/}
+            <div style={{ padding: '0px', height: '0px' }}></div>
+            <div style={{ padding: '5px', borderTop: '2px solid black', width: '100%' }}></div>
+            <div style={{ padding: '5px', height: '20px' }}></div>
 
             {/*ICON NAV BAR DIV*/} 
             <div className='icon-nav-1 '>
@@ -156,22 +156,22 @@ function Home() {
                 />
             </div>
 
-            
-            
-
-            {/*Divider Line*/}
             <div style={{ padding: '5px', height: '50px' }}></div>
-            <div style={{ padding: '5px', borderTop: '2px solid black', width: '100%' , alignItems: 'center'}}></div>
-            <div style={{ padding: '5px', height: '20px' }}></div>
                
             {/*Quick About*/}
             <h2 style = {{
                 textAlign: 'center',
                 color: 'black', 
                 fontSize: '3rem',
-                lineHeight: '0em'}}>
+                lineHeight: '0em'
+             }}>
             <i>who i am</i>
             </h2>
+
+             {/*Divider Line*/}
+            <div style={{ padding: '0px', height: '0px' }}></div>
+            <div style={{ padding: '5px', borderTop: '2px solid black', width: '100%' , alignItems: 'center'}}></div>
+            <div style={{ padding: '5px', height: '20px' }}></div>
 
             <IDCard 
                 profilePicture={headshot}

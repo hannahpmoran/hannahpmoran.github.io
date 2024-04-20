@@ -6,6 +6,7 @@ import Footer from './Footer';
 
 // import images
 import headshot from '../Images/headshot_1.png';
+import arrow from '../Images/arrow_back.png';
 
  
 function About() {
@@ -17,7 +18,12 @@ function About() {
                 <link rel="canonical" href="http://example.com/example" />
             </Helmet>
 
-        <div style={{ textAlign: 'center' }}>
+        <div style = {{display: 'flex', alignItems: 'center', padding: '5px', gap: '10px'}}> 
+            <img src={arrow} alt='arrow'></img>
+            <p style = {{ padding: '5px', height: '0'}}><i>bring me home</i></p>
+        </div>
+
+        <div style={{ textAlign: 'center',alignItems: 'flex-start' }}>
             <h1>about me</h1>
         </div>
             

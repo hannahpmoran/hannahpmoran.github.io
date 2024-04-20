@@ -4,13 +4,17 @@ import { Link } from 'react-router-dom';
 // import style
 import '../App.css';
 
+// import images
+import logo from '../Images/hm_logo_1.png';
+
 function HeaderHome() {
     return (
         <header style={{ padding: '5px', backgroundColor: '#f4f4f4' }}>
         <div style={{ position: 'dynamic', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             {/* Logo or Site Title */}
             <div>
-                <Link to='/'><h1 style = {{ color: 'black', lineHeight: '0em' }}>hm.</h1></Link>
+                {/* <Link to='/'><h1 style = {{ color: 'black', lineHeight: '0em' }}>hm.</h1></Link> */}
+                <Link to='/'><img src={logo} alt='logo' style = {{height: '40px', width: 'auto', alignItems: 'center'}} ></img></Link>
             </div>
 
             {/* Navigation Links */}
