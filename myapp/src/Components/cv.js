@@ -1,15 +1,15 @@
 import React from 'react';
-import {Helmet} from "react-helmet";
+// import {Helmet} from "react-helmet";
 
  
 const Cv = () => {
     return (
         <div>
-            <Helmet>
+            {/* <Helmet>
                 <meta charSet="utf-8" />
                 <title>cv</title>
                 <link rel="canonical" href="http://example.com/example" />
-            </Helmet>
+            </Helmet> */}
 
         <div style={{ padding: '5px' }}>
             <h2>cv</h2>

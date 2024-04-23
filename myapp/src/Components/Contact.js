@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Helmet} from "react-helmet";
+//import {Helmet} from "react-helmet";
 
 function Contact() {
     // Define state variables for the form fields
@@ -27,11 +27,11 @@ function Contact() {
 
     return (
         <div>
-            <Helmet>
+            {/* <Helmet>
                 <meta charSet="utf-8" />
                 <title>contact</title>
                 <link rel="canonical" href="http://example.com/example" />
-            </Helmet>
+            </Helmet> */}
 
         <div style={{ padding: '20px' }}>
             <h1><i>don't</i> be a stranger,</h1>
