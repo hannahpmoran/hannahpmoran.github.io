@@ -14,11 +14,13 @@ const PhotographyHelper = ({ images }) => {
 
 // Styled components for gallery and images
 const GalleryContainer = styled.div`
-  display: grid;
+  display: flex;
   flex-wrap: wrap; // Allow images to wrap to the next line
   justify-content: space-evenly; // Space images evenly in the container
   gap: 10px; // Adjust gap between images
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust the minimum size as needed */
+  padding-left: 200px;
+  padding-right: 200px;
   
 `;
 

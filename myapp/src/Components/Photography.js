@@ -1,7 +1,6 @@
 import React from 'react';
 
 // import pages
-import Footer from './Footer';
 import PhotographyHelper from './PhotographyHelper';
 
 //import images
@@ -31,29 +30,17 @@ import walker_4 from '../Images/PhotographyGallery/walker_4.jpg';
 import walker_5 from '../Images/PhotographyGallery/walker_5.jpg';
 import walker_6 from '../Images/PhotographyGallery/walker_6.jpg';
 import walker_7 from '../Images/PhotographyGallery/walker_7.jpg';
+import headshot from '../Images/PhotographyGallery/photography.png';
+
 
 
  
 function Photography() {
 
     const images = [
-        film_2022_2,
-        film_2022_6,
-        pa6_7,
-        pa6_11,
-        pa6_10,
-        walker_1,
-        walker_2,
-        walker_3,
-        walker_4,
-        walker_5,
-        walker_6,
-        walker_7,
-        headshot_1,
-        pa6_12,
-        photo_projector_2,
-        projector_photos_1,
+        // constructed image final
         IMG_7741,
+        headshot,
         IMG_7742,
         IMG_7743,
         IMG_7744,
@@ -62,19 +49,39 @@ function Photography() {
         IMG_7749,
         IMG_7752,
         IMG_7756,
-        IMG_7757
-
-        // Add more image URLs as needed
+        IMG_7757,
+        // projector photos
+        photo_projector_2,
+        projector_photos_1,
+        headshot_1,
+        // the 'walker' museum film photos
+        walker_1,
+        walker_2,
+        walker_3,
+        walker_4,
+        walker_5,
+        walker_6,
+        walker_7,
+        pa6_12,
+        // intro to photography film photos
+        film_2022_2,
+        film_2022_6,
+        pa6_7,
+        pa6_11,
+        pa6_10
+        // Add more images
       ];
 
     return (
-        <div> 
-            <h1 style = {{
-                textAlign: 'center'
-            }}>photography</h1>
+        
+        <>
+        <div style={{ textAlign: 'right', alignItems: 'flex-start', left: '200px',}}>
+            <h1 style = {{padding: '10px'}}><a style = {{color: 'blue'}} href = 'photography'>photography</a></h1>
+            
             <PhotographyHelper images={images} />
-            <Footer />
+
         </div>
+        </>
     );
 }
 

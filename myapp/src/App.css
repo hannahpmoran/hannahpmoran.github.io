@@ -1,25 +1,7 @@
 body {
-    background-color: #F9F7F4; /* Beige color */
-    font-family: 'Arial';
+    background-color: #F2F2F2; /* background color */
+    font-family: 'Verdana';
 }
-
-header {
-    background-color: #F9F7F4; /* Beige color */
-    /* // position: dynamic; */
-    text-align: center;
-    left: 100%;
-    bottom: 100%;
-}
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #F7F4EF; /* Beige color */
-    color: white;
-    text-align: center;
-  }
 
 /* Unvisited links */
 a {
@@ -30,11 +12,6 @@ a {
 /* Visited links */
 a:visited {
     color: black; /* Set the desired visited link color */
-}
-
-/* Hover effect for links */
-a:hover {
-    color: darkgray; /* Optional: Change color on hover */
 }
 
 .photo {
@@ -49,7 +26,7 @@ a:hover {
     width: 100%;
     height: 100%;
     background-image: url('./Images/noise_texture.png');
-    opacity: 0.1; /* Adjust the opacity for a subtle effect */
+    opacity: 0.04; /* Adjust the opacity for a subtle effect */
     pointer-events: none; /* Prevent interaction with the overlay */
     z-index: 9999; /* Ensure the overlay is on top of other elements */
 }
@@ -105,29 +82,6 @@ a:hover {
   'opsz' 24
 }
 
-/* Styling for the ID card */
-.id-card {
-    top: 0;
-    justify-content: center;
-    margin: auto;
-    width: 60%; /* Adjust the width as needed */
-    height: 380px;
-    padding: 15px; /* Add padding for spacing */
-    border: 1px solid #ccc; /* Add a border */
-    /* border-radius: 8px; Rounded corners */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-     /* Add margin around the card */
-}
-
-/* Profile picture styling */
-.profile-picture {
-    width: 300px; /* Adjust width as needed */
-    height: 375px; /* Adjust height as needed */
-    /* border-radius: 8px; Rounded corners; Circular shape */
-    object-fit: cover; /* Cover the image */
-    margin-bottom: 5px; /* Add space below the image */
-}
-
 /* Styling for the name */
 .name {
     margin: 0; /* Remove default margin */
@@ -160,5 +114,39 @@ a:hover {
   
   .item:hover {
     font-size: 22px; /* Increase font size on hover */
+  }
+  
+  .navigation-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.05); */
+  }
+  
+  .navigation-bar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .navigation-bar ul li {
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .navigation-bar ul li a {
+    color: black;
+    text-decoration: bold;
+    display: inline-block;
+    font-weight: bold;
+  }
+  
+  .navigation-bar ul li:hover {
+    transform: scale(1.03); /* Increase size by 10% */
+  }
+  
+  .navigation-bar ul li a:hover {
+    color: darkgray;
   }
   
