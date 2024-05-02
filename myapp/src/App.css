@@ -1,6 +1,19 @@
+@font-face {
+  font-family: 'ArchivoNarrow';
+  src: url('./Fonts/ArchivoNarrow-Regular.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-Bold.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-BoldItalic.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-Italic.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-Medium.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-MediumItalic.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-SemiBold.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-SemiBoldItalic.ttf') format('truetype'),
+  /* Add other font formats if necessary */
+}
+
 body {
     background-color: #F2F2F2; /* background color */
-    font-family: 'Verdana';
+    font-family: 'ArchivoNarrow';
 }
 
 /* Unvisited links */
@@ -36,86 +49,7 @@ a:visited {
     transition: opacity 0.5s ease-in-out; /* Adjust duration and timing function as needed */
 }
 
-/* Opacity of text when visible (fully opaque) */
-.fade-text.visible {
-    opacity: 1;
-}
 
-.icon-nav-1 {
-    display: flex;
-    justify-content: space-evenly;
-}
-  
-.icon {
-    width: 100%; /* Set the fixed width */
-    height: 400px; /* Maintain aspect ratio */
-    max-width: 100%; /* Ensure the image doesn't exceed its parent's width */
-}
-
-.hover-element:hover {
-    filter: blur(5px); /* Adjust the blur amount as needed */
-}
-
-.hover-element:hover + .hover-text {
-    opacity: 1; /* Show the text when the element is hovered over */
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0); /* Start and end positions at rest */
-    }
-    50% {
-        transform: translateY(-20px); /* Upward movement */
-    }
-}
-
-/* Apply the bounce animation to text elements with the class 'bounce-text' */
-.bounce-text {
-    animation: bounce 2s infinite ease-in-out; /* Animation duration, count, and timing */
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-
-/* Styling for the name */
-.name {
-    margin: 0; /* Remove default margin */
-    font-size: 1.5rem; /* Adjust font size as needed */
-}
-
-/* Styling for the contact information */
-.contact-info, .bio {
-    margin: 5px 0; /* Add vertical spacing */
-    font-size: 1rem; /* Adjust font size as needed */
-}
-
-@font-face {
-    font-family: 'Butler-Barcelona'; /* Custom font name */
-    src: url('./Fonts/Butler-Free-Blk.otf') format('otf'); /* Path to woff file */
-    font-weight: normal; /* Font weight */
-    font-style: normal; /* Font style */
-}
-
-.item-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .item {
-    font-size: 20px;
-    transition: font-size 0.2s ease; /* Smooth transition for font size */
-    cursor: pointer;
-  }
-  
-  .item:hover {
-    font-size: 22px; /* Increase font size on hover */
-  }
-  
   .navigation-bar {
     position: fixed;
     left: 0;
@@ -137,16 +71,25 @@ a:visited {
   
   .navigation-bar ul li a {
     color: black;
-    text-decoration: bold;
     display: inline-block;
-    font-weight: bold;
-  }
-  
-  .navigation-bar ul li:hover {
-    transform: scale(1.03); /* Increase size by 10% */
+    font-weight: 600;
   }
   
   .navigation-bar ul li a:hover {
     color: darkgray;
   }
+ 
+  .hover-effect {
+    color: black; /* Initial text color */
+    transition: color 1s ease; /* Optional: smooth color transition */
+    font-size: 40pt;
+    margin: 0;
+    position: 'fixed';
+    padding-left: 400px;
+
+}
+
+.hover-effect:hover {
+    color: darkgrey; /* Text color when hovered */
+}
   

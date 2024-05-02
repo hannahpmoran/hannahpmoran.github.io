@@ -6,11 +6,12 @@ import './App.css';
 // import pages
 import ScrollToTop from './Components/ScrollToTop';
 import Home from './Components/Home';
-import About from './Components/About';
+import Info from './Components/Info';
 import Photography from './Components/Photography';
 import Design from './Components/Design';
 import HCI from './Components/HCI';
 import NavBar from  './Components/NavBar';
+import Work from  './Components/Work';
 
 function App() {
 
@@ -31,10 +32,11 @@ function App() {
             <Routes>
               <Route exact path="/" element={<Home />} />
                 <Route exact path="/home" element={<Home />} />
-                <Route path="/about" element={<About />} />
+                <Route path="/info" element={<Info />} />
                 <Route path="/photography" element={<Photography />} />
                 <Route path="/design" element={<Design />} />
                 <Route path="/hci" element={<HCI />} />
+                <Route path="/work" element={<Work />} />
                 {/* Add more routes as needed */}
             </Routes>
             
