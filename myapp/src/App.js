@@ -7,9 +7,6 @@ import './App.css';
 import ScrollToTop from './Components/ScrollToTop';
 import Home from './Components/Home';
 import Info from './Components/Info';
-import Photography from './Components/Photography';
-import Design from './Components/Design';
-import HCI from './Components/HCI';
 import NavBar from  './Components/NavBar';
 import Work from  './Components/Work';
 
@@ -33,13 +30,10 @@ function App() {
               <Route exact path="/" element={<Home />} />
                 <Route exact path="/home" element={<Home />} />
                 <Route path="/info" element={<Info />} />
-                <Route path="/photography" element={<Photography />} />
-                <Route path="/design" element={<Design />} />
-                <Route path="/hci" element={<HCI />} />
                 <Route path="/work" element={<Work />} />
                 {/* Add more routes as needed */}
             </Routes>
-            
+        
       </BrowserRouter>
   );
 }
