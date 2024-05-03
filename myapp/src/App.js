@@ -28,7 +28,7 @@ function App() {
             {/* Routing */}
             <Routes>
               <Route exact path="/" element={<Home />} />
-                <Route exact path="/home" element={<Home />} />
+                <Route exact path="/" element={<Home />} />
                 <Route path="/info" element={<Info />} />
                 <Route path="/work" element={<Work />} />
                 {/* Add more routes as needed */}
