@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'ArchivoNarrow';
+  src: url('./Fonts/ArchivoNarrow-Regular.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-Bold.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-BoldItalic.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-Italic.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-Medium.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-MediumItalic.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-SemiBold.ttf') format('truetype'),
+       url('./Fonts/ArchivoNarrow-SemiBoldItalic.ttf') format('truetype'),
+  /* Add other font formats if necessary */
+}
+
+body {
+    background-color: #F2F2F2; /* background color */
+    font-family: 'ArchivoNarrow';
+}
+
+/* Unvisited links */
+a {
+    color: black; /* Set the desired link color */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+/* Visited links */
+a:visited {
+    color: black; /* Set the desired visited link color */
+}
+
+.photo {
+    height: 100px;
+    width: auto; 
+}
+
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./Images/noise_texture.png');
+    opacity: 0.04; /* Adjust the opacity for a subtle effect */
+    pointer-events: none; /* Prevent interaction with the overlay */
+    z-index: 9999; /* Ensure the overlay is on top of other elements */
+}
+
+.fade-text {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Adjust duration and timing function as needed */
+}
+
+
+  .navigation-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.05); */
+  }
+  
+  .navigation-bar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .navigation-bar ul li {
+    padding: 10px;
+    transition: color 1s ease;
+  }
+  
+  .navigation-bar ul li a {
+    color: black;
+    display: inline-block;
+    font-weight: 600;
+    transition: color 1s ease; 
+  }
+  
+  .navigation-bar ul li a:hover {
+    color: darkgray;
+  }
+ 
+  .hover-effect {
+    color: black; /* Initial text color */
+    transition: color 1s ease; /* Optional: smooth color transition */
+    font-size: 40pt;
+    margin: 0;
+    position: 'fixed';
+    padding-left: 400px;
+
+}
+
+.hover-effect:hover {
+    color: darkgrey; /* Text color when hovered */
+}
+
+
