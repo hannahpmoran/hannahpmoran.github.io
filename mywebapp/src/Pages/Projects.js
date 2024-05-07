@@ -27,6 +27,22 @@ const projects = [
         year: "2023"
     },
     {
+        name: "intiMET",
+        link: "https://github.com/hannahpmoran/cs257/tree/main/webapp#intimet",
+        role: "Designer, Developer, Sculptor",
+        year: "2023"
+    },
+    {
+        name: "Boggle",
+        link: "https://github.com/hannahpmoran/cs111/tree/main/boggle#bogglepy",
+        role: "Designer and Developer",
+        year: "2021"
+    }
+    
+];
+
+const photographyProjects = [
+    {
         name: "Signed",
         link: "https://flic.kr/s/aHBqjBoKGx",
         role: "Photographer and Editor",
@@ -44,6 +60,22 @@ const projects = [
         role: "Photographer",
         year: "2023"
     },
+    {
+        name: "Nirthfolde",
+        link: "https://flic.kr/s/aHBqjBoKF7",
+        role: "Photographer",
+        year: "2022"
+    },
+    {
+        name: "rgb.",
+        link: "https://flic.kr/s/aHBqjBoMdj",
+        role: "Photographer and Editor",
+        year: "2022"
+    }
+    
+];
+
+const maxProjects = [
     {
         name: "Finale",
         link: "https://github.com/hannahpmoran/musc208/tree/main/the_finale#the-finale",
@@ -65,33 +97,10 @@ const projects = [
     {
         name: "Study in Randomness",
         link: "https://github.com/hannahpmoran/musc208/tree/main/randomness#randomness",
-        role: "Designer, Developer, Sculptor",
+        role: "Max Developer",
         year: "2023"
-    },
-    {
-        name: "intiMET",
-        link: "https://github.com/hannahpmoran/cs257/tree/main/webapp#intimet",
-        role: "Designer, Developer, Sculptor",
-        year: "2023"
-    },
-    {
-        name: "Nirthfolde",
-        link: "https://flic.kr/s/aHBqjBoKF7",
-        role: "Photographer",
-        year: "2022"
-    },
-    {
-        name: "rgb.",
-        link: "https://flic.kr/s/aHBqjBoMdj",
-        role: "Photographer",
-        year: "2022"
-    },
-    {
-        name: "Boggle",
-        link: "https://github.com/hannahpmoran/cs111/tree/main/boggle#bogglepy",
-        role: "Designer and Developer",
-        year: "2021"
     }
+    
 ];
 
 function Code() {
@@ -104,7 +113,7 @@ function Code() {
             >
 
         <div style={{ textAlign: 'right', alignItems: 'flex-start', left: '200px'}}>
-            <h1 style={{ padding: '10px'}}><a style={{ color: 'blue'}} href='work'>work</a></h1>
+            <p style={{ fontSize: '25px',padding: '10px', fontWeight: '1', color: 'blue'}}>PROJECTS (DESIGN AND DEVELOPMENT)</p>
                 
             <div>
                 <ul style={{ textAlign: 'right', listStyleType: 'none', paddingLeft: '200px', paddingRight: '10px'}}>
@@ -118,6 +127,35 @@ function Code() {
                     ))}
                 </ul>
             </div>
+
+            <p style={{ fontSize: '25px',padding: '10px', fontWeight: '1', color: 'blue'}}>PROJECTS (PHOTOGRAPHY)</p>
+            <div>
+                <ul style={{ textAlign: 'right', listStyleType: 'none', paddingLeft: '200px', paddingRight: '10px'}}>
+                    {photographyProjects.map((project, index) => (
+                        <li key={index}>
+                            <p style={{ margin: '0'}}><a className="hover-effect" href={project.link}>{project.name}</a></p>
+                            <p style={{ margin: '0', paddingBottom: '50px'}}>
+                                <b>{project.role} / {project.year} </b>
+                            </p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <p style={{ fontSize: '25px',padding: '10px', fontWeight: '1', color: 'blue'}}>PROJECTS (MAX)</p>
+            <div>
+                <ul style={{ textAlign: 'right', listStyleType: 'none', paddingLeft: '200px', paddingRight: '10px'}}>
+                    {maxProjects.map((project, index) => (
+                        <li key={index}>
+                            <p style={{ margin: '0'}}><a className="hover-effect" href={project.link}>{project.name}</a></p>
+                            <p style={{ margin: '0', paddingBottom: '50px'}}>
+                                <b>{project.role} / {project.year} </b>
+                            </p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
         </div>
 
         </motion.div>
