@@ -1,28 +1,36 @@
 import React from 'react';
 
-// import components
-import ScrollToTop from './ScrollToTop';
+const projects = [
+    {
+        name: "Mapping Intercepted Radio Communication",
+        link: "https://arcg.is/Su81O0",
+        role: "Designer and Developer",
+        year: "2024",
+        description: "StoryMap website. Final project for DGAH 210: Spatial Humanities."
+    },
+    // Add more project objects here...
+];
 
-// import style
-import '../App.css';
-
-//import
-import home from '../Images/homescreen.png';
-
-function Home() {
-
+function Code() {
     return (
-        <>
-            {/* Scroll to top component */}
-            <ScrollToTop /> 
-
-            {/* Main content */}
-            <main>
-            <img style = {{width: '100%', height: 'auto', top: '0px', paddingLeft: '100px'}}src = {home} alt = 'background'></img>
-            </main>
-
-        </>
+        <div style={{ textAlign: 'right', alignItems: 'flex-start', left: '200px'}}>
+            <h1 style={{ padding: '10px'}}><a style={{ color: 'blue'}} href='work'>work</a></h1>
+                
+            <div>
+                <ul style={{ textAlign: 'right', listStyleType: 'none', paddingLeft: '200px', paddingRight: '10px'}}>
+                    {projects.map((project, index) => (
+                        <li key={index}>
+                            <p style={{ margin: '0'}}><a className="hover-effect" href={project.link}>{project.name}</a></p>
+                            <p style={{ margin: '0', paddingBottom: '50px'}}>
+                                <b>{project.role} / {project.year} <br/></b>
+                                {project.description}
+                            </p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
     );
 }
 
-export default Home;
+export default Code;

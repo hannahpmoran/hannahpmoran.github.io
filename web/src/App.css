@@ -16,6 +16,13 @@ body {
     font-family: 'ArchivoNarrow';
 }
 
+/* .home {
+  width: 100%; 
+  height: auto;
+  top: 0px; 
+  padding-left: 100px;
+  background-image: url('./Images/home/homescreen.png');
+} */
 /* Unvisited links */
 a {
     color: black; /* Set the desired link color */
@@ -38,7 +45,7 @@ a:visited {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('./Images/noise_texture.png');
+    background-image: url('./Images/home/noise_texture.png');
     opacity: 0.04; /* Adjust the opacity for a subtle effect */
     pointer-events: none; /* Prevent interaction with the overlay */
     z-index: 9999; /* Ensure the overlay is on top of other elements */
@@ -56,6 +63,7 @@ a:visited {
     top: 0;
     width: 200px;
     height: 100%;
+    font-size: 25px;
     /* background-color: rgba(0, 0, 0, 0.05); */
   }
   
@@ -94,4 +102,21 @@ a:visited {
     color: darkgrey; /* Text color when hovered */
 }
 
+/* Page Transition CSS */
+.fade-enter {
+  opacity: 0;
+}
 
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
