@@ -66,6 +66,7 @@ body {
   height: 100%;
   padding-left: 10px;
   padding-top: 10px;
+  z-index: 1000;
 }
 
 .navigation-bar:hover {

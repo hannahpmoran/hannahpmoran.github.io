@@ -112,9 +112,24 @@ function Projects() {
             transition={{ duration: 0.9, ease: 'easeInOut' }}
             >
 
-        <div style={{ textAlign: 'right' }} >
+
+        <div style = {{ alignItems: 'flex-start', height: '40%',  textAlign: 'right',  top: '0', paddingTop: '0px', paddingLeft: '20%', paddingRight: '10px', right: '0'}}>
+            <div style = {{ textDecoration: 'line-through', fontSize: '30pt', color: 'darkgray'}}>
+                WORK WORK WORK WORK
+            </div>
+        </div>
+
+        <div style = {{position: 'fixed', width: '20%', paddingLeft:'15%', paddingRight:'30%', top: '100px'}} >
+            <span><a href = '/projects'><b>Explore </b></a></span>
+            <p>Here is a collection of my highlighted works over the past three years. 
+                The collection displays my experience with software development, digital design, and various other creative mediums.
+                Much of my work can be found on my <a href = 'https://github.com/hannahpmoran'>Github.</a>  </p>
+        </div>
+
+
+        <div style={{ textAlign: 'right',  paddingLeft: '40%'}} >
             {/* <p style={{ fontSize: '25px', fontWeight: '1', color: 'blue', padding: '30px'}}>PROJECTS (DESIGN AND DEVELOPMENT)</p> */}
-                
+            <h2 style={{ margin: 0, padding: 0, color: 'lightblue' }}>PROJECTS (DESIGN AND DEVELOPMENT)</h2>
             <div>
                 <ul className = 'projects-list' >
                     {projects.map((project, index) => (
@@ -129,6 +144,7 @@ function Projects() {
             </div>
 
             {/* <p style={{ fontSize: '25px', padding: '30px', fontWeight: '1', color: 'blue', margin: '0'}}>PROJECTS (PHOTOGRAPHY)</p> */}
+            <h2 style={{ margin: 0, padding: 0, color: 'lightblue' }}>PROJECTS (PHOTOGRAPHY)</h2>
             <div>
                 <ul className = 'projects-list' >
                     {photographyProjects.map((project, index) => (
@@ -143,6 +159,7 @@ function Projects() {
             </div>
 
             {/* <p style={{ fontSize: '25px',padding: '30px', fontWeight: '1', color: 'blue'}}>PROJECTS (MAX)</p> */}
+            <h2 style={{ margin: 0, padding: 0, color: 'lightblue' }}>PROJECTS (MAX)</h2>
             <div>
                 <ul className = 'projects-list' >
                     {maxProjects.map((project, index) => (
