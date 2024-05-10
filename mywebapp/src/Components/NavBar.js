@@ -9,16 +9,19 @@ import logo from '../Images/home/logo.png';
 const NavigationBar = () => {
 
   return (
-    <div className="navigation-bar">
-      {/* <h1 style = {{padding: '10px', fontSize: '30pt'}}><a href = "/">hannah moran</a></h1> */}
-      {/* Your navigation links */}
-      {/* <img src = {logo} alt = 'logo' style = {{width: '50px', paddingLeft: '10px', paddingTop: '10px', margin: '0'}} ></img> */}
-      <ul>
-        <li><a href = '/'><img style = {{ width: '50px', margin: '0'}} src = {logo} alt = 'hpm'></img></a></li>
-        <li><a href="/" >HOME</a></li>
-        <li><a href="/projects" >PROJECTS</a></li>
-        <li><a href="/info" >INFO</a></li>
-      </ul>
+    <div style = {{ display: 'flex',  alignItems: 'flex-start' }} >
+      
+      <div className="navigation-bar">
+          <div><a href = '/'><img style = {{ width: '60px' }} src = {logo} alt = 'hpm'></img></a></div>
+          <div><a href="/" className='navigation-bar-text' >HOME</a></div>
+          <div><a href="/info" className='navigation-bar-text' >INFO</a></div>
+          <div><a href="/projects" className='navigation-bar-text' >WORK</a></div>
+      </div>
+
+      <div style = {{ display: 'flex', alignItems: 'flex-start'}}>
+          <div className='navigation-bar-text-2'>2021-<br></br>2024</div>
+      </div>
+
     </div>
   );
 };

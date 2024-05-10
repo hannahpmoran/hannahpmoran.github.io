@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 // import github from '../Images/github.png';
 
  
-function About() {
+function Info() {
     return (
         <>
         <motion.div 
@@ -16,12 +16,12 @@ function About() {
             transition={{ duration: 0.9, ease: 'easeInOut' }}
         >
 
-        <div style={{ textAlign: 'right', alignItems: 'flex-start', left: '200px' }} >
-        <p style={{ fontSize: '25px',padding: '10px', fontWeight: '1', color: 'blue'}}>ABOUT ME</p>
+        <div style={{ textAlign: 'right', alignItems: 'flex-start' }} >
+        {/* <p style={{ fontSize: '25px',padding: '30px', fontWeight: '1', color: 'blue'}}>ABOUT ME</p> */}
         
         <div>
-            <ul style = {{textAlign: 'left', listStyleType: 'none', paddingLeft: '200px', paddingRight: '200px'}} >
-                <li style = {{marginBottom: '10px', fontSize: '25px'}} ><b>Designer. Developer.</b></li>
+            <ul style = {{textAlign: 'left', listStyleType: 'none'}} >
+                <li style = {{marginBottom: '10px', fontSize: '25px'}} ><b>this is a title.</b></li>
                 <li style = {{marginBottom: '10px'}} >I am currently a senior at Carleton College majoring in Computer Science with a minor in Digital Arts and Humanities. I graduate in June of 2024.</li>
                 <li style = {{marginBottom: '10px'}} >My passion for UI/UX design began when I first joined my college's <a style = {{fontWeight: 'bold'}} href = "https://carleton.hack4impact.org/" > Hack4Impact</a> chapter.
                                                         With a newfound enjoyment in computer science classes, the club got me thinking about the importance of design in modern software development. 
@@ -34,21 +34,10 @@ function About() {
             </ul>
         </div>
 
-        <p style={{ fontSize: '25px',padding: '10px', fontWeight: '1', color: 'blue'}}>CONTACT ME</p>
-        <div>
-            
-            <ul style = {{textAlign: 'left', listStyleType: 'none', paddingLeft: '200px', paddingRight: '200px'}} >
-                <li style = {{marginBottom: '10px', fontSize: '25px'}} ><b>Don't be a stranger.</b></li>
-
-                <li style = {{marginBottom: '10px' }}>Find me at: <a style = {{color: 'darkgray'}} href = "https://www.linkedin.com/in/hannah-p-moran/">Linkedin.</a> <a style = {{color: 'darkgray'}} href = "https://github.com/hannahpmoran">Github.</a> </li>
-                <li><div></div></li>
-            </ul>
-        </div>
-
         </div>
         </motion.div>
         </>
     );
 }
 
-export default About;
+export default Info;

@@ -103,7 +103,7 @@ const maxProjects = [
     
 ];
 
-function Code() {
+function Projects() {
     return (
         <motion.div 
             initial={{ opacity: 0 }}
@@ -112,14 +112,14 @@ function Code() {
             transition={{ duration: 0.9, ease: 'easeInOut' }}
             >
 
-        <div style={{ textAlign: 'right', alignItems: 'flex-start', left: '200px'}}>
-            <p style={{ fontSize: '25px',padding: '10px', fontWeight: '1', color: 'blue'}}>PROJECTS (DESIGN AND DEVELOPMENT)</p>
+        <div style={{ textAlign: 'right' }} >
+            {/* <p style={{ fontSize: '25px', fontWeight: '1', color: 'blue', padding: '30px'}}>PROJECTS (DESIGN AND DEVELOPMENT)</p> */}
                 
             <div>
-                <ul style={{ textAlign: 'right', listStyleType: 'none', paddingLeft: '200px', paddingRight: '10px'}}>
+                <ul className = 'projects-list' >
                     {projects.map((project, index) => (
                         <li key={index}>
-                            <p style={{ margin: '0'}}><a className="hover-effect" href={project.link}>{project.name}</a></p>
+                            <p style={{ margin: '0'}}><a className="projects-list-text" href={project.link}>{project.name}</a></p>
                             <p style={{ margin: '0', paddingBottom: '50px'}}>
                                 <b>{project.role} / {project.year} </b>
                             </p>
@@ -128,12 +128,12 @@ function Code() {
                 </ul>
             </div>
 
-            <p style={{ fontSize: '25px',padding: '10px', fontWeight: '1', color: 'blue'}}>PROJECTS (PHOTOGRAPHY)</p>
+            {/* <p style={{ fontSize: '25px', padding: '30px', fontWeight: '1', color: 'blue', margin: '0'}}>PROJECTS (PHOTOGRAPHY)</p> */}
             <div>
-                <ul style={{ textAlign: 'right', listStyleType: 'none', paddingLeft: '200px', paddingRight: '10px'}}>
+                <ul className = 'projects-list' >
                     {photographyProjects.map((project, index) => (
                         <li key={index}>
-                            <p style={{ margin: '0'}}><a className="hover-effect" href={project.link}>{project.name}</a></p>
+                            <p style={{ margin: '0'}}><a className="projects-list-text" href={project.link}>{project.name}</a></p>
                             <p style={{ margin: '0', paddingBottom: '50px'}}>
                                 <b>{project.role} / {project.year} </b>
                             </p>
@@ -142,12 +142,12 @@ function Code() {
                 </ul>
             </div>
 
-            <p style={{ fontSize: '25px',padding: '10px', fontWeight: '1', color: 'blue'}}>PROJECTS (MAX)</p>
+            {/* <p style={{ fontSize: '25px',padding: '30px', fontWeight: '1', color: 'blue'}}>PROJECTS (MAX)</p> */}
             <div>
-                <ul style={{ textAlign: 'right', listStyleType: 'none', paddingLeft: '200px', paddingRight: '10px'}}>
+                <ul className = 'projects-list' >
                     {maxProjects.map((project, index) => (
                         <li key={index}>
-                            <p style={{ margin: '0'}}><a className="hover-effect" href={project.link}>{project.name}</a></p>
+                            <p style={{ margin: '0'}}><a className="projects-list-text" href={project.link}>{project.name}</a></p>
                             <p style={{ margin: '0', paddingBottom: '50px'}}>
                                 <b>{project.role} / {project.year} </b>
                             </p>
@@ -162,4 +162,4 @@ function Code() {
     );
 }
 
-export default Code;
+export default Projects;

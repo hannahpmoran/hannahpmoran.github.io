@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // 
-import home from '../Images/home/homescreen.png';
+// import home from '../Images/home/homescreen.png';
 
 function Home() {
     return (
@@ -16,12 +16,18 @@ function Home() {
                 
             {/* Main content */}
             <main>
-                <h1 style = {{position: 'fixed', right: '0', paddingRight: '10px', fontWeight: '1', fontSize: '50px', margin: '0'}}>the digital portfolio</h1>
-                {/* <img src = {home} style = {{width: '100%', 
-                height: 'auto',
-                top: '0px' ,
-                paddingLeft: '100px'}}
-                alt = 'background for the digital portfolio'></img> */}
+                {/* TOP */}
+                <div style = {{ height: '40%', width: '80%', textAlign: 'right', position: 'fixed', top: '0', paddingTop: '0px', paddingRight: '10px', right: '0'}}>
+                    <div style = {{ textDecoration: 'line-through', fontSize: '30pt', color: 'darkgray'}}>
+                        DIGITAL PORTFOLIO DIGITAL PORTFOLIO
+                    </div>
+                    
+                    <div style = {{ fontSize: '80pt' }}>
+                        <a href = '/' > DIGITAL PORTFOLIO</a>
+                    </div>
+
+                    
+                </div>
             </main>
         </motion.div>
     );
