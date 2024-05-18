@@ -17,13 +17,19 @@ const projects = [
     {
         name: "CarlMart",
         link: "https://github.com/BNwike47/CarlMart-SWEexternship",
-        role: "Designer and Developer",
+        role: "Designer and Frontend Developer",
         year: "2023"
     },
     {
         name: "Ivy",
         link: "https://github.com/hannahpmoran/cs232/tree/main/ivy#ivy",
         role: "Designer, Developer, Sculptor",
+        year: "2023"
+    },
+    {
+        name: "HAFA",
+        link: "https://github.com/hannahpmoran/cs232/tree/main/ivy#ivy",
+        role: "Designer",
         year: "2023"
     },
     {
@@ -126,7 +132,23 @@ function Projects() {
                 Much of my work can be found on my <a href = 'https://github.com/hannahpmoran'>Github.</a>  </p>
         </div>
 
-
+        <div style={{ textAlign: 'right',  paddingLeft: '40%'}} >
+            {/* <p style={{ fontSize: '25px', fontWeight: '1', color: 'blue', padding: '30px'}}>PROJECTS (DESIGN AND DEVELOPMENT)</p> */}
+            <h2 style={{ margin: 0, padding: 0, color: 'lightblue' }}>PROJECTS (DESIGN AND DEVELOPMENT)</h2>
+            <div>
+                <ul className = 'projects-list' >
+                    {projects.map((project, index) => (
+                        <li key={index}>
+                            <p style={{ margin: '0'}}><a className="projects-list-text" href={project.link}>{project.name}</a></p>
+                            <p style={{ margin: '0', paddingBottom: '50px'}}>
+                                <b>{project.role} / {project.year} </b>
+                            </p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>?
+    
         <div style={{ textAlign: 'right',  paddingLeft: '40%'}} >
             {/* <p style={{ fontSize: '25px', fontWeight: '1', color: 'blue', padding: '30px'}}>PROJECTS (DESIGN AND DEVELOPMENT)</p> */}
             <h2 style={{ margin: 0, padding: 0, color: 'lightblue' }}>PROJECTS (DESIGN AND DEVELOPMENT)</h2>
