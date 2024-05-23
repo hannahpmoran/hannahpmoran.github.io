@@ -20,7 +20,7 @@
 
 /* BODY STYLES */
 body {
-    background-color: #0E1514; /* background color */
+    /* background-color: #0E1514; background color */
     font-family: 'OxygenMono';
     color: #CEDFDC; 
 }
@@ -155,3 +155,13 @@ a:not(.navigation-bar a):hover:not(.projects-list-text):hover {
   color: #6B9E96; 
   transition: color 1s ease;
 }
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
