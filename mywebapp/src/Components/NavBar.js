@@ -12,7 +12,7 @@ const NavigationBar = () => {
     <div style = {{ display: 'flex',  alignItems: 'flex-start' }} >
       
       <div className="navigation-bar">
-          <div><a href = '/'><img style = {{ width: '60px' }} src = {logo} alt = 'hpm'></img></a></div>
+          {/* <div><a href = '/'><img style = {{ width: '60px' }} src = {logo} alt = 'hpm'></img></a></div> */}
           <div><a href="/" className='navigation-bar-text' >HOME</a></div>
           <div><a href="/info" className='navigation-bar-text' >INFO</a></div>
           <div><a href="/projects" className='navigation-bar-text' >WORK</a></div>
