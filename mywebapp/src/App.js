@@ -6,18 +6,27 @@ import './App.css';
 // import ScrollToTop from './Components/ScrollToTop';
 import NavBar from  './Components/NavBar';
 import AnimatedRoutes from './Components/AnimatedRoutes';
+import Background from './Components/Background'
 
 function App() {
 
   return (
     <div>
+
+
+      
       <NavBar/>
+
+      <Background/>
+      {/* <div class="background"></div> */}
 
       <BrowserRouter>     
 
         <AnimatedRoutes />
         
       </BrowserRouter>
+
+      
       
       </div>
   );

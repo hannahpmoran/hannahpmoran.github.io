@@ -118,7 +118,7 @@ function Projects() {
             transition={{ duration: 0.9, ease: 'easeInOut' }}
             >
 
-
+        <div style = {{paddingRight: '10px'}}>
         <div style = {{ alignItems: 'flex-start', height: '40%',  textAlign: 'right',  top: '0', paddingTop: '0px', paddingLeft: '20%', paddingRight: '10px', right: '0'}}>
             <div style = {{ textDecoration: 'line-through', fontSize: '30pt', color: 'darkgray'}}>
                 WORK WORK WORK WORK
@@ -134,7 +134,7 @@ function Projects() {
 
         <div style={{ textAlign: 'right',  paddingLeft: '40%'}} >
             {/* <p style={{ fontSize: '25px', fontWeight: '1', color: 'blue', padding: '30px'}}>PROJECTS (DESIGN AND DEVELOPMENT)</p> */}
-            <h2 style={{ margin: 0, padding: 0, color: 'lightblue' }}>PROJECTS (DESIGN AND DEVELOPMENT)</h2>
+            <h2 style={{ margin: 0, padding: 0,  color: '#6B9E96', textDecoration: 'underline'}}>PROJECTS (DESIGN AND DEVELOPMENT)</h2>
             <div>
                 <ul className = 'projects-list' >
                     {projects.map((project, index) => (
@@ -147,11 +147,11 @@ function Projects() {
                     ))}
                 </ul>
             </div>
-        </div>?
+        </div>
     
         <div style={{ textAlign: 'right',  paddingLeft: '40%'}} >
             {/* <p style={{ fontSize: '25px', fontWeight: '1', color: 'blue', padding: '30px'}}>PROJECTS (DESIGN AND DEVELOPMENT)</p> */}
-            <h2 style={{ margin: 0, padding: 0, color: 'lightblue' }}>PROJECTS (DESIGN AND DEVELOPMENT)</h2>
+            <h2 style={{ margin: 0, padding: 0,  color: '#6B9E96', textDecoration: 'underline' }}>PROJECTS (DESIGN AND DEVELOPMENT)</h2>
             <div>
                 <ul className = 'projects-list' >
                     {projects.map((project, index) => (
@@ -166,7 +166,7 @@ function Projects() {
             </div>
 
             {/* <p style={{ fontSize: '25px', padding: '30px', fontWeight: '1', color: 'blue', margin: '0'}}>PROJECTS (PHOTOGRAPHY)</p> */}
-            <h2 style={{ margin: 0, padding: 0, color: 'lightblue' }}>PROJECTS (PHOTOGRAPHY)</h2>
+            <h2 style={{ margin: 0, padding: 0, color: '#6B9E96', textDecoration: 'underline' }}>PROJECTS (PHOTOGRAPHY)</h2>
             <div>
                 <ul className = 'projects-list' >
                     {photographyProjects.map((project, index) => (
@@ -181,7 +181,7 @@ function Projects() {
             </div>
 
             {/* <p style={{ fontSize: '25px',padding: '30px', fontWeight: '1', color: 'blue'}}>PROJECTS (MAX)</p> */}
-            <h2 style={{ margin: 0, padding: 0, color: 'lightblue' }}>PROJECTS (MAX)</h2>
+            <h2 style={{ margin: 0, padding: 0, color: '#6B9E96', textDecoration: 'underline'}}>PROJECTS (MAX)</h2>
             <div>
                 <ul className = 'projects-list' >
                     {maxProjects.map((project, index) => (
@@ -195,6 +195,7 @@ function Projects() {
                 </ul>
             </div>
 
+        </div>
         </div>
 
         </motion.div>
