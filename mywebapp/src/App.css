@@ -22,7 +22,7 @@
 body {
     /* background-color: #0E1514; background color */
     font-family: 'OxygenMono';
-    color: #CEDFDC; 
+    color: #E0E2DB; 
 }
 
 /* PROJECTS LINKS STYLES */
@@ -31,18 +31,18 @@ body {
 }
 .projects-list-text {
     text-decoration: none; 
-    color: #CEDFDC; 
+    color: #E0E2DB; 
     transition: color 1s ease; 
     font-size: 40pt;
     position: 'fixed';
 }
 
 .projects-list-text:visited {
-    color: #CEDFDC; /* Set the desired visited link color */
+    color: #E0E2DB; /* Set the desired visited link color */
 }
 
 .projects-list-text:hover {
-  color: #6B9E96; /* Text color when hovered */
+  color: #49565E; /* Text color when hovered */
 }
 
 
@@ -71,11 +71,11 @@ body {
 
 .navigation-bar:hover {
   transition: color 1s ease;
-  color: #6B9E96;
+  color: #49565E;
 }
 
 .navigation-bar a {
-  color:  #6B9E96;
+  color:  #BEB7A4;
   transition: color 1s ease; 
   text-decoration: none;
   margin: 0;
@@ -84,7 +84,7 @@ body {
 }
 
 .navigation-bar ul li a:hover {
-  color:  #6B9E96;
+  color:  #BEB7A4;
   text-decoration: none;
   margin: 0;
   list-style-position: inside;
@@ -93,7 +93,7 @@ body {
 .navigation-bar-line {
   height: 100%;
   width: '200px';
-  border-left: 200px solid #CEDFDC;
+  border-left: 200px solid #E0E2DB;
   padding: '10px';
 }
 
@@ -104,11 +104,11 @@ body {
 }
 
 .navigation-bar-text:visited {
-  color: #CEDFDC; /* Set the desired visited link color */
+  color: #E0E2DB; /* Set the desired visited link color */
 }
 
 .navigation-bar-text:hover {
-color: #6B9E96; /* Text color when hovered */
+color: #49565E; /* Text color when hovered */
 }
 
 /* NAV BAR LINKS 2*/
@@ -117,7 +117,7 @@ color: #6B9E96; /* Text color when hovered */
   text-decoration: none;
   bottom: 0;
   position: fixed;
-  color: #6B9E96;
+  color: #49565E;
   padding-left: 10px;
   padding-bottom: 10px;
 }
@@ -146,13 +146,13 @@ color: #6B9E96; /* Text color when hovered */
 a:not(.navigation-bar a):not(.projects-list-text) {
   /* Apply styles to all links except those within the navigation bar */
   text-decoration: none; 
-  color: #CEDFDC; 
+  color: #E0E2DB; 
   transition: color 1s ease;
 }
 
 a:not(.navigation-bar a):hover:not(.projects-list-text):hover {
   /* Apply hover styles to all links except those within the navigation bar */
-  color: #6B9E96; 
+  color: #F0A202; 
   transition: color 1s ease;
 }
 

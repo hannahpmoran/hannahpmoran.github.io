@@ -4,7 +4,7 @@ import React from 'react';
 import '../App.css';
 
 // import logo
-import logo from '../Images/home/logo.png';
+// import logo from '../Images/home/logo.png';
 
 const NavigationBar = () => {
 

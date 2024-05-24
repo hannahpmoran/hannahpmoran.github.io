@@ -5,7 +5,9 @@ function Background() {
   const containerRef = useRef(null);
   let scene, camera, renderer, stars;
 
+  
   useEffect(() => {
+    
     init();
     animate();
 
@@ -13,6 +15,7 @@ function Background() {
       // Clean up resources
       renderer.dispose();
     };
+    // eslint-disable-next-line
   }, []);
 
   function init() {
@@ -27,7 +30,7 @@ function Background() {
     camera.position.z = 1000;
 
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x0E1514);
+    scene.background = new THREE.Color(0x11171A);
 
     starForge();
 
@@ -39,17 +42,13 @@ function Background() {
     window.addEventListener('resize', onWindowResize, false);
   }
 
-  function animate() {
-    requestAnimationFrame(animate);
-    render();
-  }
 
   function render() {
     renderer.render(scene, camera);
   }
 
   function starForge() {
-    const starQty = 1000;
+    const starQty = 100;
     const geometry = new THREE.BufferGeometry();
     const positions = [];
 
@@ -63,13 +62,12 @@ function Background() {
 
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
 
-    const material = new THREE.PointsMaterial({ color: 0x6B9E96, size: 2 });
+    const material = new THREE.PointsMaterial({ color: 0xBEB7A4, size: 2 });
     stars = new THREE.Points(geometry, material);
     scene.add(stars);
   }
 
   function onWindowResize() {
-    const container = containerRef.current;
     const WIDTH = window.innerWidth;
     const HEIGHT = window.innerHeight;
     camera.aspect = WIDTH / HEIGHT;
@@ -89,7 +87,7 @@ function Background() {
 
   function updateStarsPosition() {
     const positions = stars.geometry.attributes.position.array;
-    const speed = 0.1; // Adjust the speed of movement
+    const speed = 0.5; // Adjust the speed of movement
   
     for (let i = 0; i < positions.length; i += 3) {
       // Update x, y, and z coordinates of each star
