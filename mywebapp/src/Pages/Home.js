@@ -18,8 +18,8 @@ function Home() {
             <main>
                 {/* TOP */}
                 <div style = {{ height: '40%', width: '80%', textAlign: 'right', position: 'fixed', top: '0', paddingTop: '0px', paddingRight: '10px', right: '0'}}>
-                    <div style = {{ textDecoration: 'line-through', fontSize: '30pt', color: '#182125'}}>
-                        DIGITAL PORTFOLIO DIGITAL PORTFOLIO
+                    <div style = {{ textDecoration: 'line-through', fontSize: '30pt', color: '#BEB7B1'}}>
+                        DIGITAL PORTFOLIO
                     </div>
                     
                     <div style = {{ fontSize: '80pt' }}>

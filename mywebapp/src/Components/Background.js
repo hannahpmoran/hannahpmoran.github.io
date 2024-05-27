@@ -1,116 +1,97 @@
+// src/GradientBackground.js
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 
-function Background() {
-  const containerRef = useRef(null);
-  let scene, camera, renderer, stars;
+const GradientBackground = () => {
+  const mountRef = useRef(null);
 
-  
   useEffect(() => {
-    
-    init();
+    const mount = mountRef.current;
+
+    // Scene setup
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    mount.appendChild(renderer.domElement);
+
+    // Create geometry and material for the gradient
+    const geometry = new THREE.PlaneGeometry(2, 2, 1, 1);
+    const uniforms = {
+      u_time: { type: 'f', value: 1.0 },
+      u_resolution: { type: 'v2', value: new THREE.Vector2() },
+      u_mouse: { type: 'v2', value: new THREE.Vector2() }
+    };
+
+    const material = new THREE.ShaderMaterial({
+      uniforms: uniforms,
+      vertexShader: `
+        void main() {
+          gl_Position = vec4( position, 1.0 );
+        }
+      `,
+      fragmentShader: `
+        uniform float u_time;
+        uniform vec2 u_resolution;
+        uniform vec2 u_mouse;
+
+        void main() {
+          vec2 st = gl_FragCoord.xy / u_resolution;
+          vec3 color = vec3(15); // Light grey color
+
+          float dist = distance(st, u_mouse / u_resolution);
+          color = mix(vec3(1.0), vec3(0.9), dist); // Mix between white and light grey
+
+          gl_FragColor = vec4(color, 1.0);
+        }
+      `
+    });
+
+    const plane = new THREE.Mesh(geometry, material);
+    scene.add(plane);
+
+    camera.position.z = 1;
+
+    // Animation loop
+    const animate = function () {
+      requestAnimationFrame(animate);
+
+      uniforms.u_time.value += 0.5;
+
+      renderer.render(scene, camera);
+    };
+
     animate();
 
-    return () => {
-      // Clean up resources
-      renderer.dispose();
+    // Handle window resize
+    const handleResize = () => {
+      const { innerWidth, innerHeight } = window;
+      renderer.setSize(innerWidth, innerHeight);
+      camera.aspect = innerWidth / innerHeight;
+      camera.updateProjectionMatrix();
+      uniforms.u_resolution.value.set(innerWidth, innerHeight);
     };
-    // eslint-disable-next-line
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    // Handle mouse movement
+    const handleMouseMove = (event) => {
+      uniforms.u_mouse.value.x = event.clientX;
+      uniforms.u_mouse.value.y = window.innerHeight - event.clientY;
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('mousemove', handleMouseMove);
+      mount.removeChild(renderer.domElement);
+    };
   }, []);
 
-  function init() {
-    const container = document.createElement('div');
-    container.classList.add('background-container');
-    document.body.appendChild(container);
+  return <div className="canvas-container" ref={mountRef} />;
+};
 
-    const WIDTH = window.innerWidth;
-    const HEIGHT = window.innerHeight;
-
-    camera = new THREE.PerspectiveCamera(75, WIDTH / HEIGHT, 1, 1000);
-    camera.position.z = 1000;
-
-    scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x11171A);
-
-    starForge();
-
-    renderer = new THREE.WebGLRenderer({ alpha: true });
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(WIDTH, HEIGHT);
-    container.appendChild(renderer.domElement);
-
-    window.addEventListener('resize', onWindowResize, false);
-  }
-
-
-  function render() {
-    renderer.render(scene, camera);
-  }
-
-  function starForge() {
-    const starQty = 100;
-    const geometry = new THREE.BufferGeometry();
-    const positions = [];
-
-    for (let i = 0; i < starQty; i++) {
-      const x = (Math.random() - 0.5) * 1000;
-      const y = (Math.random() - 0.5) * 1000;
-      const z = (Math.random() - 0.5) * 1000;
-
-      positions.push(x, y, z);
-    }
-
-    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-
-    const material = new THREE.PointsMaterial({ color: 0xBEB7A4, size: 2 });
-    stars = new THREE.Points(geometry, material);
-    scene.add(stars);
-  }
-
-  function onWindowResize() {
-    const WIDTH = window.innerWidth;
-    const HEIGHT = window.innerHeight;
-    camera.aspect = WIDTH / HEIGHT;
-    camera.updateProjectionMatrix();
-    renderer.setSize(WIDTH, HEIGHT);
-  }
-
-  function animate() {
-    requestAnimationFrame(animate);
-  
-    // Update stars position
-    updateStarsPosition();
-  
-    // Render the scene
-    render();
-  }
-
-  function updateStarsPosition() {
-    const positions = stars.geometry.attributes.position.array;
-    const speed = 0.5; // Adjust the speed of movement
-  
-    for (let i = 0; i < positions.length; i += 3) {
-      // Update x, y, and z coordinates of each star
-      positions[i] += (Math.random() - 0.5) * speed;
-      positions[i + 1] += (Math.random() - 0.5) * speed;
-      positions[i + 2] += (Math.random() - 0.5) * speed;
-  
-      // Reset position if it goes beyond the bounds
-      if (Math.abs(positions[i]) > 1000 || Math.abs(positions[i + 1]) > 1000 || Math.abs(positions[i + 2]) > 1000) {
-        positions[i] = (Math.random() - 0.5) * 1000;
-        positions[i + 1] = (Math.random() - 0.5) * 1000;
-        positions[i + 2] = (Math.random() - 0.5) * 1000;
-      }
-    }
-  
-    // Update buffer geometry with new positions
-    stars.geometry.attributes.position.needsUpdate = true;
-  }
-  
-
-  return (
-    <div className="background-container" ref={containerRef}></div>
-  );
-}
-
-export default Background;
+export default GradientBackground;

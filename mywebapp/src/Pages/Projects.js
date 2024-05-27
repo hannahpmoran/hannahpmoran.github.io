@@ -3,22 +3,23 @@ import { motion } from 'framer-motion';
 
 const projects = [
     {
-        name: "A Week of Coffee Breaks",
-        link: "https://github.com/hannahpmoran/cs314/blob/main/data-card/README.md#data-card-a-week-of-coffee-breaks",
-        role: "Designer",
-        year: "2024"
-    },
-    {
         name: "Mapping Intercepted Radio Communication",
         link: "https://arcg.is/Su81O0",
         role: "Designer and Developer",
         year: "2024"
     },
     {
-        name: "CarlMart",
-        link: "https://github.com/BNwike47/CarlMart-SWEexternship",
-        role: "Designer and Frontend Developer",
-        year: "2023"
+        name: "A Week of Coffee Breaks",
+        link: "https://github.com/hannahpmoran/cs314/blob/main/data-card/README.md#data-card-a-week-of-coffee-breaks",
+        role: "Designer",
+        year: "2024"
+    },
+    {
+        name: "Gentrification in Atlanta",
+        link: "https://observablehq.com/d/70ad9ce8827add61",
+        role: "Designer and Developer",
+        year: "2024"
+        
     },
     {
         name: "Ivy",
@@ -27,27 +28,27 @@ const projects = [
         year: "2023"
     },
     {
+        name: "CarlMart",
+        link: "https://www.behance.net/gallery/199626231/CarlMart-Design-Screens",
+        role: "Designer and Frontend Developer",
+        year: "2023"
+    },
+    {
         name: "HAFA",
-        link: "https://github.com/hannahpmoran/cs232/tree/main/ivy#ivy",
+        link: "https://www.behance.net/gallery/199626587/HAFA-Design-Screens-%28Early-Stages%29",
         role: "Designer",
-        year: "2023"
-    },
-    {
-        name: "intiMET",
-        link: "https://github.com/hannahpmoran/cs257/tree/main/webapp#intimet",
-        role: "Designer, Developer, Sculptor",
-        year: "2023"
-    },
-    {
-        name: "Boggle",
-        link: "https://github.com/hannahpmoran/cs111/tree/main/boggle#bogglepy",
-        role: "Designer and Developer",
-        year: "2021"
+        year: "2022"
     }
     
 ];
 
 const photographyProjects = [
+    {
+        name: "Low and High Key",
+        link: "https://www.flickr.com/photos/151245207@N08/albums/72177720317346832",
+        role: "Photographer and Editor",
+        year: "2024"
+    },
     {
         name: "Signed",
         link: "https://flic.kr/s/aHBqjBoKGx",
@@ -71,14 +72,7 @@ const photographyProjects = [
         link: "https://flic.kr/s/aHBqjBoKF7",
         role: "Photographer",
         year: "2022"
-    },
-    {
-        name: "rgb.",
-        link: "https://flic.kr/s/aHBqjBoMdj",
-        role: "Photographer and Editor",
-        year: "2022"
     }
-    
 ];
 
 const maxProjects = [
@@ -120,38 +114,21 @@ function Projects() {
 
         <div style = {{paddingRight: '10px'}}>
         <div style = {{ alignItems: 'flex-start', height: '40%',  textAlign: 'right',  top: '0', paddingTop: '0px', paddingLeft: '20%', paddingRight: '10px', right: '0'}}>
-            <div style = {{ textDecoration: 'line-through', fontSize: '30pt', color: '#182125'}}>
-                WORK WORK WORK WORK
+            <div style = {{ textDecoration: 'line-through', fontSize: '30px', color: '#BEB7B1'}}>
+                WORK
             </div>
         </div>
 
         <div style = {{position: 'fixed', width: '20%', paddingLeft:'15%', paddingRight:'30%', top: '100px'}} >
-            <span><a href = '/projects'><b>What I've Done </b></a></span>
-            <p>Here is a collection of my highlighted works over the past three years. 
-                The collection displays my experience with software development, digital design, and various other creative mediums.
-                Much of my work can be found on my <a href = 'https://github.com/hannahpmoran'><b>Github</b>.</a>  </p>
-        </div>
-
-        <div style={{ textAlign: 'right',  paddingLeft: '40%'}} >
-            {/* <p style={{ fontSize: '25px', fontWeight: '1', color: 'blue', padding: '30px'}}>PROJECTS (DESIGN AND DEVELOPMENT)</p> */}
-            <h2 style={{ margin: 0, padding: 0,  color: '#758895', textDecoration: 'underline'}}>PROJECTS (DESIGN AND DEVELOPMENT)</h2>
-            <div>
-                <ul className = 'projects-list' >
-                    {projects.map((project, index) => (
-                        <li key={index}>
-                            <p style={{ margin: '0'}}><a className="projects-list-text" href={project.link}>{project.name}</a></p>
-                            <p style={{ margin: '0', paddingBottom: '50px'}}>
-                                <b>{project.role} / {project.year} </b>
-                            </p>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+            <p>This collection displays my experience with software development, digital design, and various other creative mediums.
+                More of my work can be found on my <a href = 'https://www.behance.net/hannahmoran4/'><b>Behance</b></a>,
+                 <a href = 'https://www.flickr.com/photos/151245207@N08/albums'><b> Flickr</b></a>,
+                  and<a href = 'https://github.com/hannahpmoran'><b> Github</b></a>.</p>
         </div>
     
         <div style={{ textAlign: 'right',  paddingLeft: '40%'}} >
             {/* <p style={{ fontSize: '25px', fontWeight: '1', color: 'blue', padding: '30px'}}>PROJECTS (DESIGN AND DEVELOPMENT)</p> */}
-            <h2 style={{ margin: 0, padding: 0,  color: '#758895', textDecoration: 'underline' }}>PROJECTS (DESIGN AND DEVELOPMENT)</h2>
+            <h2 style={{ margin: 0, padding: 0,  color: '#BEB7B1', textDecoration: 'underline' }}>PROJECTS (DESIGN AND DEVELOPMENT)</h2>
             <div>
                 <ul className = 'projects-list' >
                     {projects.map((project, index) => (
@@ -166,7 +143,7 @@ function Projects() {
             </div>
 
             {/* <p style={{ fontSize: '25px', padding: '30px', fontWeight: '1', color: 'blue', margin: '0'}}>PROJECTS (PHOTOGRAPHY)</p> */}
-            <h2 style={{ margin: 0, padding: 0, color: '#758895', textDecoration: 'underline' }}>PROJECTS (PHOTOGRAPHY)</h2>
+            <h2 style={{ margin: 0, padding: 0, color: '#BEB7B1', textDecoration: 'underline' }}>PROJECTS (PHOTOGRAPHY)</h2>
             <div>
                 <ul className = 'projects-list' >
                     {photographyProjects.map((project, index) => (
@@ -181,7 +158,7 @@ function Projects() {
             </div>
 
             {/* <p style={{ fontSize: '25px',padding: '30px', fontWeight: '1', color: 'blue'}}>PROJECTS (MAX)</p> */}
-            <h2 style={{ margin: 0, padding: 0, color: '#758895', textDecoration: 'underline'}}>PROJECTS (MAX)</h2>
+            <h2 style={{ margin: 0, padding: 0, color: '#BEB7B1', textDecoration: 'underline'}}>PROJECTS (MAX)</h2>
             <div>
                 <ul className = 'projects-list' >
                     {maxProjects.map((project, index) => (
